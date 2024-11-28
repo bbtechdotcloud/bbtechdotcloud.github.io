@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="BBTech provides innovative tech solutions including cybersecurity consulting, web and software development, Web3 and blockchain solutions, and more. Empower your next-gen projects with our expertise.">
+  <meta name="author" content="BBTech">
+  
+  
+  <meta property="og:title" content="BBTech - Tech Solutions">
+  <meta property="og:description" content="BBTech provides innovative tech solutions including cybersecurity consulting, web and software development, Web3 and blockchain solutions, and more. Empower your next-gen projects with our expertise.">
+  <meta property="og:image" content="./bbtech.png">
+  <meta property="og:url" content="https://bbtech.cloud">
+  <meta property="og:type" content="website">
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BBTech - Tech Solutions">
+  <meta name="twitter:description" content="BBTech provides innovative tech solutions including cybersecurity consulting, web and software development, Web3 and blockchain solutions, and more. Empower your next-gen projects with our expertise.">
+  <meta name="twitter:image" content="./bbtech.png">
+
+  <title>BBTech - Tech Solutions</title>
+  <link rel="icon" href="./bbtech.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    /* Gradient background for the hero section */
+.hero {
+  background: linear-gradient(to right, #6a4c8c, #5a3f8c, #3e1e5d);
+}
+
+/* Darker gradient for the service and technical sections */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #4b2c5d, #36214c, #291533);
+}
+
+/* Lighter gradient for the call to action (explore services) button */
+.bg-yellow-500 {
+  background-color: #fbbf24;
+}
+
+.bg-yellow-400 {
+  background-color: #f59e0b;
+}
+
+/* Card background color and hover effect */
+.service-card {
+  background-color: #4b2c5d;
+}
+
+.service-card:hover {
+  background-color: #5a3f8c;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Subtle gradient for the contact section */
+.bg-black {
+  background-color: #1a1a1a;
+}
+
+/* Navbar links and hover effect */
+.navbar a:hover {
+  color: #fbbf24;
+  transition: color 0.3s ease;
+}
+
+/* Text colors */
+.text-yellow-400 {
+  color: #fbbf24;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray-300 {
+  color: #d1d5db;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+/* Button background color for Explore Our Services */
+.btn-yellow {
+  background-color: #fbbf24;
+  transition: background-color 0.3s ease;
+}
+
+.btn-yellow:hover {
+  background-color: #f59e0b;
+}
+
+/* Fade-in animation */
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Gradient background for the technical depth section */
+#technical-topics {
+  background: linear-gradient(to right, #4b2c5d, #36214c, #291533);
+}
+
+/* Gradient background for the services section */
+#services {
+  background: linear-gradient(to right, #4b2c5d, #36214c, #291533);
+}
+
+/* Footer Section */
+#contact {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Fixing the text links for email */
+a {
+  color: #fbbf24;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #f59e0b;
+}
+
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  
+<nav class="fixed top-0 left-0 w-full p-6 bg-transparent z-50">
+  <div class="flex items-center justify-between container mx-auto">
+    <a href="#" class="text-3xl font-bold text-yellow-400">BBTech</a>
+    <ul class="hidden md:flex space-x-6 text-lg font-medium">
+      <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="#services" class="hover:text-yellow-400 transition">Services</a></li>
+      <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+    </ul>
+    <!-- Mobile Menu -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-yellow-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="md:hidden bg-gray-900 absolute top-20 left-0 w-full px-6 py-4 hidden">
+    <ul class="space-y-4 text-lg">
+      <li><a href="#home" class="text-yellow-400 hover:text-yellow-500">Home</a></li>
+      <li><a href="#services" class="text-yellow-400 hover:text-yellow-500">Services</a></li>
+      <li><a href="#about" class="text-yellow-400 hover:text-yellow-500">About</a></li>
+      <li><a href="#contact" class="text-yellow-400 hover:text-yellow-500">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+  
+  <section class="hero bg-gradient-to-r from-purple-800 via-purple-600 to-indigo-900 text-center py-40" id="home">
+    <div class="container mx-auto px-6">
+      <h1 class="text-6xl font-extrabold text-white fade-in-up">Innovative Tech Solutions for the Digital Future</h1>
+      <p class="text-lg text-gray-300 mt-6 fade-in-up" style="animation-delay: 0.3s;">
+        Secure, scalable, and cutting-edge services in cybersecurity, Web3, software development, and blockchain technology. 
+        We're here to power your next-gen projects.
+      </p>
+      <a href="#services" class="inline-block mt-8 bg-yellow-500 hover:bg-yellow-400 text-black py-3 px-8 rounded-full text-xl font-semibold transition">
+        Explore Our Services
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="py-32 bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900" id="services">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-yellow-400 fade-in-up">Our Expertise</h2>
+      <p class="text-lg text-gray-300 mt-4 fade-in-up" style="animation-delay: 0.3s;">
+        BBTech excels in providing advanced solutions across various tech domains. Here's how we can help you succeed:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+        
+        <div class="service-card p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition">
+          <svg class="w-16 h-16 mx-auto text-yellow-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h1m2 0h-1v4h1m-4 0h1v-4h-1m1-5V9a1 1 0 00-.293-.707l-3-3a1 1 0 00-.707-.293 1 1 0 00-.707.293l-3 3A1 1 0 004 9v1a1 1 0 001 1h12a1 1 0 001-1z" />
+          </svg>
+          <h3 class="text-2xl font-bold text-white">Cybersecurity Consulting</h3>
+          <p class="text-gray-400 mt-4">We help protect your digital assets and infrastructure with advanced threat analysis, risk management, and the latest in encryption technology.</p>
+        </div>
+        
+        <div class="service-card p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition">
+          <svg class="w-16 h-16 mx-auto text-yellow-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 9l3 3-3 3m0 0l3 3-3 3M7 9h10M5 12h.01M5 12l-.01-.01M5 12h.01M5 12l-.01.01" />
+          </svg>
+          <h3 class="text-2xl font-bold text-white">Web & Software Development</h3>
+          <p class="text-gray-400 mt-4">From beautiful websites to full-scale enterprise applications, we craft user-friendly, scalable, and performance-driven software.</p>
+        </div>
+        
+        <div class="service-card p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition">
+          <svg class="w-16 h-16 mx-auto text-yellow-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l-2-2 7-7 7 7-2 2M7 20h10a2 2 0 002-2V9H5v9a2 2 0 002 2z" />
+          </svg>
+          <h3 class="text-2xl font-bold text-white">Web3 & Blockchain Solutions</h3>
+          <p class="text-gray-400 mt-4">We help you harness the power of decentralized technologies, from creating secure smart contracts to developing tokenomics for your projects on Ethereum and Solana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-32 bg-gradient-to-r from-indigo-800 via-purple-800 to-indigo-900" id="technical-topics">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-yellow-400 fade-in-up">Technical Depth</h2>
+      <p class="text-lg text-gray-300 mt
+
+-4 fade-in-up" style="animation-delay: 0.3s;"> At BBTech, we're not just about implementing solutions – we're about mastering the latest technologies. Here's a deep dive into the technical expertise we offer: </p> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">  <div class="p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition"> <h3 class="text-2xl font-bold text-white">Blockchain Development</h3> <p class="text-gray-400 mt-4">Our team designs and develops custom blockchain solutions, including decentralized applications (dApps), token creation, and smart contract audits on Ethereum and Solana.</p> </div>  <div class="p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition"> <h3 class="text-2xl font-bold text-white">Advanced Cybersecurity</h3> <p class="text-gray-400 mt-4">We conduct comprehensive vulnerability assessments, penetration testing, and cybersecurity architecture design to safeguard your digital assets against cyber threats.</p> </div>  <div class="p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition"> <h3 class="text-2xl font-bold text-white">DevOps & Cloud Solutions</h3> <p class="text-gray-400 mt-4">We specialize in cloud-native architectures, continuous integration/continuous deployment (CI/CD) pipelines, and DevOps practices to streamline your software development lifecycle.</p> </div> </div> </div>
+</section>  <section class="py-32 bg-black text-center" id="contact"> <div class="container mx-auto"> <h2 class="text-4xl font-bold text-yellow-400 fade-in-up">Contact Us</h2> <p class="text-lg text-gray-300 mt-4 fade-in-up" style="animation-delay: 0.3s;"> Have a project in mind? Reach out to us at <a href="mailto:sales@bbtech.cloud" class="text-yellow-400">sales@bbtech.cloud</a>. </p> </div> </section> </body> </html> 

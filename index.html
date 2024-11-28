@@ -5,33 +5,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="BBTech provides innovative tech solutions including cybersecurity consulting, web and software development, Web3 and blockchain solutions, and more. Empower your next-gen projects with our expertise.">
+  <meta name="description" content="BBTech provides innovative and secure tech solutions including web development, software development, blockchain, crypto asset security, and more. Empower your next-gen projects with our expertise.">
   <meta name="author" content="BBTech">
-  
-  
+
+  <!-- Open Graph meta tags for social media previews -->
   <meta property="og:title" content="BBTech - Tech Solutions">
-  <meta property="og:description" content="BBTech provides innovative tech solutions including cybersecurity consulting, web and software development, Web3 and blockchain solutions, and more. Empower your next-gen projects with our expertise.">
+  <meta property="og:description" content="BBTech provides innovative and secure tech solutions including web development, software development, blockchain, crypto asset security, and more. Empower your next-gen projects with our expertise.">
   <meta property="og:image" content="./bbtech.png">
   <meta property="og:url" content="https://bbtech.cloud">
   <meta property="og:type" content="website">
-  
-  
+
+  <!-- Twitter card meta tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BBTech - Tech Solutions">
-  <meta name="twitter:description" content="BBTech provides innovative tech solutions including cybersecurity consulting, web and software development, Web3 and blockchain solutions, and more. Empower your next-gen projects with our expertise.">
+  <meta name="twitter:description" content="BBTech provides innovative and secure tech solutions including web development, software development, blockchain, crypto asset security, and more. Empower your next-gen projects with our expertise.">
   <meta name="twitter:image" content="./bbtech.png">
 
   <title>BBTech - Tech Solutions</title>
   <link rel="icon" href="./bbtech.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/daisyui@1.25.2/dist/full.js"></script>
   <style>
-    /* Custom animations */
+    /* Custom Styles for Blockchair-like UI */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #E0E0E0;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    }
+
+    .card-bg {
+      background-color: #222;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    
+    }
+
+    /* Card Hover effect */
+    .card:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .text-yellow-custom {
+      color: #b068ee;
+    }
+
+    .btn-primary {
+      background-color: #b068ee;
+      color: #333;
+    }
+
+    .btn-primary:hover {
+      background-color: #b088ee;
+    }
+
+    /* Section Styling */
+    .section-padding {
+      padding: 80px 0;
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+    }
+
+    /* Animation */
     @keyframes fadeInUp {
       0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -41,202 +85,204 @@
     .fade-in-up {
       animation: fadeInUp 1s ease-out forwards;
     }
-    /* Gradient background for the hero section */
-.hero {
-  background: linear-gradient(to right, #6a4c8c, #5a3f8c, #3e1e5d);
-}
 
-/* Darker gradient for the service and technical sections */
-.bg-gradient-to-r {
-  background: linear-gradient(to right, #4b2c5d, #36214c, #291533);
-}
+    /* IPhone Animation */
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-200px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
 
-/* Lighter gradient for the call to action (explore services) button */
-.bg-yellow-500 {
-  background-color: #fbbf24;
-}
+    .iphone-svg {
+      width: 300px;
+      height: auto;
+      max-width: 100%;
+      animation: slideIn 1s ease-out forwards;
+    }
 
-.bg-yellow-400 {
-  background-color: #f59e0b;
-}
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero {
+        text-align: center;
+        padding: 60px 20px;
+      }
 
-/* Card background color and hover effect */
-.service-card {
-  background-color: #4b2c5d;
-}
+      .iphone-svg {
+        width: 250px;
+        margin-top: 20px;
+      }
 
-.service-card:hover {
-  background-color: #5a3f8c;
-  transform: scale(1.05);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+      .service-card {
+        margin-bottom: 30px;
+      }
 
-/* Subtle gradient for the contact section */
-.bg-black {
-  background-color: #1a1a1a;
-}
+      .btn-primary {
+        padding: 12px 30px;
+      }
+    }
 
-/* Navbar links and hover effect */
-.navbar a:hover {
-  color: #fbbf24;
-  transition: color 0.3s ease;
-}
+    /* Mobile Responsive Grids */
+    @media (max-width: 480px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
 
-/* Text colors */
-.text-yellow-400 {
-  color: #fbbf24;
-}
+      .hero {
+        padding: 50px 15px;
+      }
 
-.text-white {
-  color: #ffffff;
-}
+      .section-padding {
+        padding: 60px 0;
+      }
 
-.text-gray-300 {
-  color: #d1d5db;
-}
-
-.text-gray-400 {
-  color: #9ca3af;
-}
-
-/* Button background color for Explore Our Services */
-.btn-yellow {
-  background-color: #fbbf24;
-  transition: background-color 0.3s ease;
-}
-
-.btn-yellow:hover {
-  background-color: #f59e0b;
-}
-
-/* Fade-in animation */
-.fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Gradient background for the technical depth section */
-#technical-topics {
-  background: linear-gradient(to right, #4b2c5d, #36214c, #291533);
-}
-
-/* Gradient background for the services section */
-#services {
-  background: linear-gradient(to right, #4b2c5d, #36214c, #291533);
-}
-
-/* Footer Section */
-#contact {
-  background-color: #1a1a1a;
-  color: white;
-}
-
-/* Fixing the text links for email */
-a {
-  color: #fbbf24;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #f59e0b;
-}
-
+      .service-card {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body>
 
-  
-<nav class="fixed top-0 left-0 w-full p-6 bg-transparent z-50">
-  <div class="flex items-center justify-between container mx-auto">
-    <a href="#" class="text-3xl font-bold text-yellow-400">BBTech</a>
-    <ul class="hidden md:flex space-x-6 text-lg font-medium">
+  <!-- Navbar -->
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full p-6 card-bg z-50">
+  <div class="container mx-auto flex items-center justify-between">
+    <a href="#" class="text-3xl font-bold text-yellow-custom">BBTech</a>
+    <ul class="flex space-x-6 text-lg font-medium">
       <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
       <li><a href="#services" class="hover:text-yellow-400 transition">Services</a></li>
       <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
       <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
     </ul>
-    <!-- Mobile Menu -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-yellow-400">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="md:hidden bg-gray-900 absolute top-20 left-0 w-full px-6 py-4 hidden">
-    <ul class="space-y-4 text-lg">
-      <li><a href="#home" class="text-yellow-400 hover:text-yellow-500">Home</a></li>
-      <li><a href="#services" class="text-yellow-400 hover:text-yellow-500">Services</a></li>
-      <li><a href="#about" class="text-yellow-400 hover:text-yellow-500">About</a></li>
-      <li><a href="#contact" class="text-yellow-400 hover:text-yellow-500">Contact</a></li>
-    </ul>
   </div>
 </nav>
 
-<script>
-  document.getElementById('menu-toggle').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
-</script>
 
-  
-  <section class="hero bg-gradient-to-r from-purple-800 via-purple-600 to-indigo-900 text-center py-40" id="home">
-    <div class="container mx-auto px-6">
-      <h1 class="text-6xl font-extrabold text-white fade-in-up">Innovative Tech Solutions for the Digital Future</h1>
-      <p class="text-lg text-gray-300 mt-6 fade-in-up" style="animation-delay: 0.3s;">
-        Secure, scalable, and cutting-edge services in cybersecurity, Web3, software development, and blockchain technology. 
-        We're here to power your next-gen projects.
-      </p>
-      <a href="#services" class="inline-block mt-8 bg-yellow-500 hover:bg-yellow-400 text-black py-3 px-8 rounded-full text-xl font-semibold transition">
-        Explore Our Services
-      </a>
-    </div>
-  </section>
-
-  
-  <section class="py-32 bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900" id="services">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold text-yellow-400 fade-in-up">Our Expertise</h2>
-      <p class="text-lg text-gray-300 mt-4 fade-in-up" style="animation-delay: 0.3s;">
-        BBTech excels in providing advanced solutions across various tech domains. Here's how we can help you succeed:
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
-        
-        <div class="service-card p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition">
-          <svg class="w-16 h-16 mx-auto text-yellow-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h1m2 0h-1v4h1m-4 0h1v-4h-1m1-5V9a1 1 0 00-.293-.707l-3-3a1 1 0 00-.707-.293 1 1 0 00-.707.293l-3 3A1 1 0 004 9v1a1 1 0 001 1h12a1 1 0 001-1z" />
-          </svg>
-          <h3 class="text-2xl font-bold text-white">Cybersecurity Consulting</h3>
-          <p class="text-gray-400 mt-4">We help protect your digital assets and infrastructure with advanced threat analysis, risk management, and the latest in encryption technology.</p>
-        </div>
-        
-        <div class="service-card p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition">
-          <svg class="w-16 h-16 mx-auto text-yellow-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 9l3 3-3 3m0 0l3 3-3 3M7 9h10M5 12h.01M5 12l-.01-.01M5 12h.01M5 12l-.01.01" />
-          </svg>
-          <h3 class="text-2xl font-bold text-white">Web & Software Development</h3>
-          <p class="text-gray-400 mt-4">From beautiful websites to full-scale enterprise applications, we craft user-friendly, scalable, and performance-driven software.</p>
-        </div>
-        
-        <div class="service-card p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition">
-          <svg class="w-16 h-16 mx-auto text-yellow-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l-2-2 7-7 7 7-2 2M7 20h10a2 2 0 002-2V9H5v9a2 2 0 002 2z" />
-          </svg>
-          <h3 class="text-2xl font-bold text-white">Web3 & Blockchain Solutions</h3>
-          <p class="text-gray-400 mt-4">We help you harness the power of decentralized technologies, from creating secure smart contracts to developing tokenomics for your projects on Ethereum and Solana.</p>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero gradient-bg text-center py-40" id="home">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="w-full md:w-1/2 text-left">
+        <h1 class="text-5xl font-extrabold text-white fade-in-up">Innovative and Secure Tech Solutions</h1>
+        <p class="text-lg text-gray-300 mt-6 fade-in-up" style="animation-delay: 0.3s;">
+          Power your next-gen projects with cutting-edge solutions in web development, software, and blockchain technologies. 100% secure and optimized for performance.
+        </p>
+        <a href="#contact" class="inline-block mt-8 btn-primary py-3 px-8 rounded-full text-xl font-semibold transition">
+          Get in Touch
+        </a>
+      </div>
+      <!-- iPhone SVG -->
+      <div class="w-full md:w-1/2 mt-8 md:mt-0">
+        <svg class="iphone-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 3h8a1 1 0 011 1v16a1 1 0 01-1 1H8a1 1 0 01-1-1V4a1 1 0 011-1z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M12 14h.01M12 10h.01M12 6h.01" />
+        </svg>
       </div>
     </div>
   </section>
 
-  
-  <section class="py-32 bg-gradient-to-r from-indigo-800 via-purple-800 to-indigo-900" id="technical-topics">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold text-yellow-400 fade-in-up">Technical Depth</h2>
-      <p class="text-lg text-gray-300 mt
+  <!-- Services Section -->
+<!-- Services Section -->
+<section class="section-padding" id="about">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold text-yellow-custom fade-in-up">What We Do</h2>
+    <p class="text-lg text-gray-300 mt-4 fade-in-up" style="animation-delay: 0.3s;">
+      BBTech provides a wide range of services to help your business grow securely and efficiently. Here's what we offer:
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+      <!-- Service 1: Web Development (Front-end & Back-end) -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 12h12M6 16h12M6 8h12" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Web Development</h3>
+        <p class="text-gray-400 mt-4">We build secure, scalable websites with custom front-end and back-end solutions. Your website is in good hands with us.</p>
+      </div>
+      <!-- Service 2: Software Development -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m10-10H2" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Software Development</h3>
+        <p class="text-gray-400 mt-4">We offer secure and efficient software solutions for businesses of all sizes, ensuring the best quality and performance.</p>
+      </div>
+      <!-- Service 3: Crypto Technologies (Ethereum & Solana) -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11l9-9 9 9M12 2v20" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Crypto Technologies</h3>
+        <p class="text-gray-400 mt-4">From smart contracts to DeFi applications, we specialize in blockchain technology on both Ethereum and Solana networks.</p>
+      </div>
+      <!-- Service 4: Code Audits -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9l3 3-3 3M5 12h14" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Code Audits</h3>
+        <p class="text-gray-400 mt-4">We provide in-depth audits for your code, ensuring it is secure, efficient, and free from vulnerabilities before deployment.</p>
+      </div>
+      <!-- Service 5: Cybersecurity Consulting -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m10-10H2" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Cybersecurity Consulting</h3>
+        <p class="text-gray-400 mt-4">Our experts provide strategic cybersecurity consulting to protect your business from cyber threats and ensure a safe digital environment.</p>
+      </div>
+      <!-- Service 6: Crypto Asset Security -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l-2-2 7-7 7 7-2 2M7 20h10a2 2 0 002-2V9H5v9a2 2 0 002 2z" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Crypto Asset Security</h3>
+        <p class="text-gray-400 mt-4">We help safeguard your crypto assets with top-tier security practices, including cold storage solutions and multi-signature setups.</p>
+      </div>
+      <!-- Service 7: Smart Contract Development -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h4m0 0h4m-4 0v4m4-4v4" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Smart Contract Development</h3>
+        <p class="text-gray-400 mt-4">We design and deploy smart contracts on blockchain platforms to ensure secure and automated transactions for your decentralized projects.</p>
+      </div>
+      <!-- Service 8: Legal Compliance for Crypto -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m10-10H2" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Legal Compliance for Crypto</h3>
+        <p class="text-gray-400 mt-4">We guide businesses through legal frameworks to ensure your crypto projects comply with regulations in your jurisdiction.</p>
+      </div>
+      <!-- Service 9: Blockchain Strategy & Consultation -->
+      <div class="service-card p-6 card-bg text-center">
+        <svg class="w-16 h-16 mx-auto text-yellow-custom mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m10-10H2" />
+        </svg>
+        <h3 class="text-2xl font-bold text-white">Blockchain Strategy & Consultation</h3>
+        <p class="text-gray-400 mt-4">We offer strategic consultation to help you leverage blockchain technology in your business, whether you're developing new solutions or optimizing existing processes.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
--4 fade-in-up" style="animation-delay: 0.3s;"> At BBTech, we're not just about implementing solutions – we're about mastering the latest technologies. Here's a deep dive into the technical expertise we offer: </p> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">  <div class="p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition"> <h3 class="text-2xl font-bold text-white">Blockchain Development</h3> <p class="text-gray-400 mt-4">Our team designs and develops custom blockchain solutions, including decentralized applications (dApps), token creation, and smart contract audits on Ethereum and Solana.</p> </div>  <div class="p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition"> <h3 class="text-2xl font-bold text-white">Advanced Cybersecurity</h3> <p class="text-gray-400 mt-4">We conduct comprehensive vulnerability assessments, penetration testing, and cybersecurity architecture design to safeguard your digital assets against cyber threats.</p> </div>  <div class="p-6 bg-purple-800 rounded-xl shadow-xl transform hover:scale-105 transition"> <h3 class="text-2xl font-bold text-white">DevOps & Cloud Solutions</h3> <p class="text-gray-400 mt-4">We specialize in cloud-native architectures, continuous integration/continuous deployment (CI/CD) pipelines, and DevOps practices to streamline your software development lifecycle.</p> </div> </div> </div>
-</section>  <section class="py-32 bg-black text-center" id="contact"> <div class="container mx-auto"> <h2 class="text-4xl font-bold text-yellow-400 fade-in-up">Contact Us</h2> <p class="text-lg text-gray-300 mt-4 fade-in-up" style="animation-delay: 0.3s;"> Have a project in mind? Reach out to us at <a href="mailto:sales@bbtech.cloud" class="text-yellow-400">sales@bbtech.cloud</a>. </p> </div> </section> </body> </html> 
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-40">
+    <div class="container mx-auto text-center text-white">
+      <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+      <p class="text-lg mb-8">Let us help you achieve secure, innovative tech solutions for your next project.</p>
+      <a href="mailto:sales@bbtech.cloud" class="btn-primary py-3 px-8 rounded-full text-xl font-semibold transition">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+</body>
+
+</html>
